@@ -4,8 +4,8 @@ import org.springframework.data.repository.CrudRepository
 
 interface CustomerRepository : CrudRepository<Customer, Long> {
 
-	fun findByLastName(lastName: String): Iterable<Customer>
+	fun findByLastNameIgnoreCase(lastName: String): Iterable<Customer>
 
-    fun findByFirstNameAndLastName(firstName: String, lastName: String): Iterable<Customer>
+    fun findByFirstNameAndLastNameIgnoreCase(firstName: String, lastName: String): Iterable<Customer>
 
 }

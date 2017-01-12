@@ -12,11 +12,11 @@ class Application {
 
     @Bean
     fun init(repository: CustomerRepository) = CommandLineRunner {
-        repository.save(Customer("Jack", "Bauer"))
-        repository.save(Customer("Chloe", "O'Brian"))
-        repository.save(Customer("Kim", "Bauer"))
-        repository.save(Customer("David", "Palmer"))
-        repository.save(Customer("Michelle", "Dessler"))
+        repository.save(Customer("Glenn", "Johansson"))
+        repository.save(Customer("Glenn", "Andersson"))
+        repository.save(Customer("Ada", "Johansson"))
+        repository.save(Customer("Glenn", "Nilsson"))
+        repository.save(Customer("Ada", "Svensson"))
 
         log.info("Customers found with findAll():")
         log.info("-------------------------------")
@@ -31,10 +31,10 @@ class Application {
         log.info(customer.toString())
         log.info("")
 
-        log.info("Customer found with findByLastName('Bauer'):")
+        log.info("Customer found with findByLastName('Johansson'):")
         log.info("--------------------------------------------")
-        for (bauer in repository.findByLastName("Bauer")) {
-            log.info(bauer.toString())
+        for (Johansson in repository.findByLastNameIgnoreCase("Johansson")) {
+            log.info(Johansson.toString())
         }
         log.info("")
     }
