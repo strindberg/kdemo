@@ -12,7 +12,7 @@ class CustomerController(val repository: CustomerRepository) {
     fun findAll() = repository.findAll()
 
     @GetMapping("/customers/{lastName}")
-    fun findByLastName(@PathVariable lastName: String, @RequestParam firstName: String?) =
+    fun findByLastName(@PathVariable lastName: String) =
             repository.findByLastNameIgnoreCase(lastName)
 
     @GetMapping("/customers/find")
