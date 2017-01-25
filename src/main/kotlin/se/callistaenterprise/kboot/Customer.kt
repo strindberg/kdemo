@@ -1,4 +1,4 @@
-package se.callistaenterprise.kotlin
+package se.callistaenterprise.kboot
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

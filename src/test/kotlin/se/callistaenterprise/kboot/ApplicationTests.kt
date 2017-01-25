@@ -1,4 +1,4 @@
-package se.callistaenterprise.kotlin
+package se.callistaenterprise.kboot
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -17,7 +17,7 @@ class ApplicationTests {
 
 	@Test
 	fun findAll() {
-		val content = """[{"firstName":"Glenn","lastName":"Johansson","id":1},{"firstName":"Glenn","lastName":"Andersson","id":2},{"firstName":"Ada","lastName":"Johansson","id":3},{"firstName":"Glenn","lastName":"Nilsson","id":4},{"firstName":"Ada","lastName":"Svensson","id":5}]"""
+		val content = """[{"firstName":"Glenn","lastName":"Johansson","id":1},{"firstName":"Glenn","lastName":"Andersson","id":2},{"firstName":"Glenn","lastName":"Nilsson","id":3},{"firstName":"Ada","lastName":"Johansson","id":4},{"firstName":"Ada","lastName":"Svensson","id":5}]"""
 		assertEquals(content, restTemplate.getForEntity("/customers", String::class.java).body)
 	}
 }

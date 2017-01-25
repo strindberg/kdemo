@@ -1,4 +1,4 @@
-package se.callistaenterprise.kotlin
+package se.callistaenterprise.kboot
 
 import kotlinx.coroutines.async
 import kotlinx.coroutines.await
