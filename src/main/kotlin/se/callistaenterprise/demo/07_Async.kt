@@ -10,8 +10,10 @@ fun runAsync(v: Int) = supplyAsync {
 }
 
 fun testAsync() {
+    // async/await makes thread suspend (but are library functions)
     val future = async {
         val nextValue = runAsync(1).await()
+        // Second call of runAsync depends on return value of first call.
         runAsync(nextValue).await()
     }
 
