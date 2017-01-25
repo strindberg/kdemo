@@ -1,6 +1,6 @@
 package se.callistaenterprise.demo
 
-// Existing classes can be extended. Here MutableList gets a new method: swap
+// Existing classes can be extended.
 fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
     val tmp = this[index1] // 'this' corresponds to the list
     this[index1] = this[index2]
@@ -9,5 +9,6 @@ fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
 
 fun testListSwap() {
     val list = mutableListOf("1", "3", "2")
+    // Within scope of extension, it looks like a regular function
     list.swap(1, 2)
 }

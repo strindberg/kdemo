@@ -12,9 +12,9 @@ class Application {
 
     @Bean
     fun init(repository: CustomerRepository) = CommandLineRunner {
-        repository.save(Customer("Glenn", "Johansson"))
-        repository.save(Customer("Glenn", "Andersson"))
-        repository.save(Customer("Glenn", "Nilsson"))
+        repository.save(Customer("Kal", "Johansson"))
+        repository.save(Customer("Kal", "Andersson"))
+        repository.save(Customer("Kal", "Nilsson"))
         repository.save(Customer("Ada", "Johansson"))
         repository.save(Customer("Ada", "Svensson"))
     }

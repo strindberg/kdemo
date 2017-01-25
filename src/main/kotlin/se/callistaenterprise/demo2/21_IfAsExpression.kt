@@ -14,5 +14,4 @@ class ExpressionDemo {
 
     fun getNoOfUsed2(inverse: Boolean) = if (!inverse) noOfUsed else noOfUsedInverse
 
-
 }
