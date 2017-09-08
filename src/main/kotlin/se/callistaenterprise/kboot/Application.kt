@@ -10,11 +10,12 @@ class Application {
 
     @Bean
     fun init(repository: CustomerRepository) = CommandLineRunner {
-        repository.save(Customer("Kal", "Johansson"))
-        repository.save(Customer("Kal", "Andersson"))
-        repository.save(Customer("Kal", "Nilsson"))
-        repository.save(Customer("Ada", "Johansson"))
-        repository.save(Customer("Ada", "Svensson"))
+        repository.save(Customer("Marit", "Bjørgen"))
+        repository.save(Customer("Petter", "Northug"))
+        repository.save(Customer("Therese", "Johaug"))
+        repository.save(Customer("Martin", "Johnsrud Sundby"))
+        repository.save(Customer("Bente", "Skari"))
+        repository.save(Customer("Bjørn", "Dæhlie"))
     }
 
 }
