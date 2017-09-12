@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.RestController
 @RestController()
 class CustomerController(val repository: CustomerRepository) {
 
-    @GetMapping("/customers")
-    fun findAll() = repository.findAll()
-
     @GetMapping("/customers/find")
     fun findByNames(@RequestParam lastName: String, @RequestParam firstName: String?) =
             if (firstName != null) repository.findByFirstNameAndLastName(firstName, lastName)

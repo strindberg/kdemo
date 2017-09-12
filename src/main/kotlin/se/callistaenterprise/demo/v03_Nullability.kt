@@ -1,7 +1,13 @@
 package se.callistaenterprise.demo
 
-interface Mailer {
-    fun sendMessage(email: String, message: String)
+class Mailer {
+    fun sendMessage(message: String) {}
+
+    fun prepareMessage(incomingMessage: String?) {
+        // ... prepare message
+        if (incomingMessage != null)
+            sendMessage(incomingMessage) // Type mismatch. Required: String. Found: String?
+    }
 }
 
 
@@ -14,5 +20,5 @@ fun sendMessageToClient(client: Client?, message: String, mailer: Mailer) {
 
     if (email != null)
         // Compiler infers that email is non-null
-        mailer.sendMessage(email, message)
+        mailer.sendMessage(message)
 }

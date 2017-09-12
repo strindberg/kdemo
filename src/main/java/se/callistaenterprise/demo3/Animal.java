@@ -1,4 +1,4 @@
-package se.callistaenterprise.java;
+package se.callistaenterprise.demo3;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -10,7 +10,7 @@ public class Animal {
         this.sound = sound;
     }
 
-    public String getSound() {
+    @Nullable String getSound() {
         return sound;
     }
 }

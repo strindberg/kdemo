@@ -1,7 +1,7 @@
 package se.callistaenterprise.demo
 
 import org.junit.Test
-import se.callistaenterprise.java.Animal
+import se.callistaenterprise.demo3.Animal
 
 class AnimalTesting {
 

@@ -1,4 +1,4 @@
-package se.callistaenterprise.java;
+package se.callistaenterprise.demo3;
 
 public final class Person {
     private final String firstName;

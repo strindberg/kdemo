@@ -20,12 +20,12 @@ version = System.getProperty("buildVersion") ?: "0.0.1-SNAPSHOT"
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-
+        javaParameters = true
         jvmTarget = "1.8"
     }
 }
 
-val versionTask = task<VersionPropertyFileTask>("createVersionPropertyFile")
+val versionTask = task<VersionPropertyFileTask>("versionTask")
 tasks["war"].dependsOn(versionTask)
 
 task<TagReleaseTask>("tagRelease")

@@ -8,7 +8,7 @@ class Rational(val numerator: Long, val denominator: Long) {
 
 fun handleRationals(val1: Rational, val2: Rational) {
     val val3 = val1 * val2
-    if (val1 * val2 == val2 * val1) {
+    if (val3 == val2 * val1) {
         println("Math works!")
     }
 }
