@@ -15,13 +15,11 @@ plugins {
     id("org.ajoberstar.grgit") version "2.0.0"
 }
 
-
 group = "se.callistaenterprise.kotlin"
 version = System.getProperty("buildVersion") ?: "0.0.1-SNAPSHOT"
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-
         jvmTarget = "1.8"
     }
 }
@@ -40,8 +38,6 @@ task<Test>("restAssuredTest") {
     excludes.clear()
     include("**/*IT*")
 }
-
-configurations.create("myconfig")
 
 publishing {
     publications {
@@ -65,6 +61,8 @@ repositories {
     maven { url = uri("https://build-inera.nordicmedtest.se/nexus/repository/releases/") }
     mavenCentral()
 }
+
+configurations.create("myconfig")
 
 dependencies {
     val kotlinVersion = "1.1.4-3"
