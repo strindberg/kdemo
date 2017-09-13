@@ -15,12 +15,13 @@ plugins {
     id("org.ajoberstar.grgit") version "2.0.0"
 }
 
+
 group = "se.callistaenterprise.kotlin"
 version = System.getProperty("buildVersion") ?: "0.0.1-SNAPSHOT"
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-        javaParameters = true
+
         jvmTarget = "1.8"
     }
 }
@@ -36,6 +37,7 @@ tasks.withType<Test> {
 
 task<Test>("restAssuredTest") {
     outputs.upToDateWhen { false }
+    excludes.clear()
     include("**/*IT*")
 }
 

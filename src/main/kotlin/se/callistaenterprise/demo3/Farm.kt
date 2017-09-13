@@ -6,7 +6,7 @@ class Farm(val animals: List<Animal>) {
     }
 }
 
-//fun main(args: Array<String>) {
-//    val farm = Farm(listOf(Animal(null)))
-//    farm.analyzeSounds()
-//}
+fun main(args: Array<String>) {
+    val farm = Farm(listOf(Animal(null)))
+    farm.analyzeSounds()
+}
